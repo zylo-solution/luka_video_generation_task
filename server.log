@@ -1,0 +1,588 @@
+nohup: ignoring input
+INFO:     Will watch for changes in these directories: ['/home/umar/Desktop/video_generation_agent']
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+INFO:     Started reloader process [808207] using WatchFiles
+INFO:     Started server process [808209]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     127.0.0.1:49204 - "GET /docs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:36160 - "POST /generate HTTP/1.1" 200 OK
+INFO:     127.0.0.1:36858 - "GET /status/e6884720-0f49-463e-bec0-54107a4783d7 HTTP/1.1" 200 OK
+Error polling status (attempt 3/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 4/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 5/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 6/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 7/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 8/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 9/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 10/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 11/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 12/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 13/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 14/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 15/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 16/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 17/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 18/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 19/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 20/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 21/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 22/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 23/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 24/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 25/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 26/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 27/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 28/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 29/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 30/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 31/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 32/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 33/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 34/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 35/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 36/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 37/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 38/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 39/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 40/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 41/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 42/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 43/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 44/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 45/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 46/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 47/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 48/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 49/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 50/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 51/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 52/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 53/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 54/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 55/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 56/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 57/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+INFO:     127.0.0.1:47226 - "GET /status/e6884720-0f49-463e-bec0-54107a4783d7 HTTP/1.1" 200 OK
+Error polling status (attempt 58/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 59/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 60/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 61/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 62/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 63/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 64/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 65/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 66/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 67/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 68/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 69/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 70/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 71/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 72/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 73/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 74/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 75/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 76/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 77/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 78/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 79/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 80/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 81/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 82/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 83/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 84/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 85/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 86/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 87/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 88/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 89/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 90/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 91/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 92/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 93/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 94/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 95/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 96/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 97/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 98/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 99/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 100/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+INFO:     127.0.0.1:60764 - "GET /status/e6884720-0f49-463e-bec0-54107a4783d7 HTTP/1.1" 200 OK
+Error polling status (attempt 101/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 102/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 103/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 104/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 105/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 106/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 107/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+INFO:     127.0.0.1:60418 - "GET /status/e6884720-0f49-463e-bec0-54107a4783d7 HTTP/1.1" 200 OK
+Error polling status (attempt 108/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 109/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 110/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 111/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 112/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 113/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 114/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 115/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 116/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 117/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 118/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 119/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 120/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 121/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 122/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 123/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 124/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+INFO:     127.0.0.1:35012 - "GET /status/e6884720-0f49-463e-bec0-54107a4783d7 HTTP/1.1" 200 OK
+Error polling status (attempt 125/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 126/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 127/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 128/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 129/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 130/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 131/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 132/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 133/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 134/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 135/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 136/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 137/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 138/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 139/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 140/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 141/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 142/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 143/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 144/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 145/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 146/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 147/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 148/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 149/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 150/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 151/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 152/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 153/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+INFO:     127.0.0.1:42734 - "GET /status/e6884720-0f49-463e-bec0-54107a4783d7 HTTP/1.1" 200 OK
+Error polling status (attempt 154/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 155/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 156/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 157/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 158/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 159/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 160/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 161/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 162/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 163/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 164/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 165/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 166/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 167/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 168/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+INFO:     127.0.0.1:56946 - "GET /status/e6884720-0f49-463e-bec0-54107a4783d7 HTTP/1.1" 200 OK
+Error polling status (attempt 169/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 170/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 171/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 172/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 173/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 174/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 175/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 176/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 177/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 178/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 179/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 180/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 181/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 182/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 183/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+INFO:     127.0.0.1:59462 - "GET /status/e6884720-0f49-463e-bec0-54107a4783d7 HTTP/1.1" 200 OK
+Error polling status (attempt 184/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+INFO:     127.0.0.1:59462 - "GET /status/e6884720-0f49-463e-bec0-54107a4783d7 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59462 - "GET /status/e6884720-0f49-463e-bec0-54107a4783d7 HTTP/1.1" 200 OK
+Error polling status (attempt 185/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 186/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 187/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 188/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+INFO:     127.0.0.1:56366 - "GET /status/e6884720-0f49-463e-bec0-54107a4783d7 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56366 - "GET /status/e6884720-0f49-463e-bec0-54107a4783d7 HTTP/1.1" 200 OK
+Error polling status (attempt 189/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 190/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 191/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 192/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 193/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 194/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+INFO:     127.0.0.1:58214 - "GET /status/e6884720-0f49-463e-bec0-54107a4783d7 HTTP/1.1" 200 OK
+Error polling status (attempt 195/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+INFO:     127.0.0.1:55538 - "GET /status/e6884720-0f49-463e-bec0-54107a4783d7 HTTP/1.1" 200 OK
+Error polling status (attempt 196/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 197/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 198/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 199/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 200/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 201/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 202/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 203/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 204/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 205/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 206/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 207/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 208/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 209/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 210/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 211/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 212/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 213/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 214/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 215/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 216/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 217/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 218/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 219/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 220/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 221/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 222/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 223/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 224/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 225/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 226/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 227/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 228/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 229/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 230/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 231/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 232/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 233/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 234/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 235/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 236/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 237/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 238/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 239/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+Error polling status (attempt 240/240): HeyGen video generation failed: Please subscribe to higher plan to generate higher resolution videos
+INFO:     127.0.0.1:53214 - "GET /status/e6884720-0f49-463e-bec0-54107a4783d7 HTTP/1.1" 200 OK
+WARNING:  WatchFiles detected changes in 'video_generator.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [808209]
+INFO:     Started server process [945726]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'video_generator.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [945726]
+INFO:     Started server process [959398]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'video_generator.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [959398]
+INFO:     Started server process [960729]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     127.0.0.1:33938 - "POST /generate HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54526 - "GET /status/424f13c2-93aa-4e16-bdcf-177344bb94fa HTTP/1.1" 200 OK
+INFO:     127.0.0.1:45212 - "GET /status/424f13c2-93aa-4e16-bdcf-177344bb94fa HTTP/1.1" 200 OK
+INFO:     127.0.0.1:41626 - "GET /status/424f13c2-93aa-4e16-bdcf-177344bb94fa HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51104 - "GET /status/424f13c2-93aa-4e16-bdcf-177344bb94fa HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59706 - "GET /download/424f13c2-93aa-4e16-bdcf-177344bb94fa HTTP/1.1" 200 OK
+WARNING:  WatchFiles detected changes in 'video_generator.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [960729]
+INFO:     Started server process [1389538]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'video_generator.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [1389538]
+WARNING:  WatchFiles detected changes in 'video_generator.py'. Reloading...
+INFO:     Started server process [1390577]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Started server process [1390631]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'video_generator.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [1390631]
+INFO:     Started server process [1391545]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     127.0.0.1:33682 - "POST /generate HTTP/1.1" 200 OK
+[SCRIPT GENERATION] Starting for prompt: A coffee shop owner discovers AI and doubles their bookings in 30 days...
+INFO:     127.0.0.1:42192 - "GET /status/0a66075d-f361-426c-b814-f05e21fba0ab HTTP/1.1" 200 OK
+INFO:     127.0.0.1:42192 - "GET /status/0a66075d-f361-426c-b814-f05e21fba0ab HTTP/1.1" 200 OK
+[VIDEO GENERATION] Starting with 5 scenes
+[SCENE 1] Dialogue: This is the opening of our story about A coffee sh...
+[SCENE 2] Dialogue: This is the background of our story about A coffee...
+[SCENE 3] Dialogue: This is the development of our story about A coffe...
+[SCENE 4] Dialogue: This is the climax of our story about A coffee sho...
+[SCENE 5] Dialogue: This is the conclusion of our story about A coffee...
+[VIDEO GENERATION] Payload contains 5 video inputs
+INFO:     127.0.0.1:48466 - "GET /status/0a66075d-f361-426c-b814-f05e21fba0ab HTTP/1.1" 200 OK
+INFO:     127.0.0.1:40974 - "GET /status/0a66075d-f361-426c-b814-f05e21fba0ab HTTP/1.1" 200 OK
+INFO:     127.0.0.1:35894 - "GET /status/0a66075d-f361-426c-b814-f05e21fba0ab HTTP/1.1" 200 OK
+INFO:     127.0.0.1:35894 - "GET /status/0a66075d-f361-426c-b814-f05e21fba0ab HTTP/1.1" 200 OK
+INFO:     127.0.0.1:36804 - "GET /status/0a66075d-f361-426c-b814-f05e21fba0ab HTTP/1.1" 200 OK
+INFO:     127.0.0.1:36804 - "GET /status/0a66075d-f361-426c-b814-f05e21fba0ab HTTP/1.1" 200 OK
+INFO:     127.0.0.1:39314 - "GET /status/0a66075d-f361-426c-b814-f05e21fba0ab HTTP/1.1" 200 OK
+INFO:     127.0.0.1:39314 - "GET /status/0a66075d-f361-426c-b814-f05e21fba0ab HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57524 - "GET /status/0a66075d-f361-426c-b814-f05e21fba0ab HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51546 - "GET /status/0a66075d-f361-426c-b814-f05e21fba0ab HTTP/1.1" 200 OK
+INFO:     127.0.0.1:45796 - "GET /status/0a66075d-f361-426c-b814-f05e21fba0ab HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48436 - "GET /status/0a66075d-f361-426c-b814-f05e21fba0ab HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58418 - "GET /download/0a66075d-f361-426c-b814-f05e21fba0ab HTTP/1.1" 200 OK
+WARNING:  WatchFiles detected changes in 'video_generator.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [1391545]
+INFO:     Started server process [1476853]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'video_generator.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [1476853]
+INFO:     Started server process [1493369]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'video_generator.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [1493369]
+INFO:     Started server process [1534527]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'video_generator.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [1534527]
+INFO:     Started server process [1534544]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     127.0.0.1:37266 - "POST /generate HTTP/1.1" 200 OK
+[SCRIPT GENERATION] Starting for prompt: A coffee shop owner discovers AI and doubles their bookings in 30 days...
+INFO:     127.0.0.1:53650 - "GET /status/15f9acde-7c3b-4527-9ed7-de99843c0bc2 HTTP/1.1" 200 OK
+[VIDEO GENERATION] Starting with 5 scenes
+[SCENE 1] Dialogue: This is the opening of our story about A coffee sh...
+[SCENE 2] Dialogue: This is the background of our story about A coffee...
+[SCENE 3] Dialogue: This is the development of our story about A coffe...
+[SCENE 4] Dialogue: This is the climax of our story about A coffee sho...
+[SCENE 5] Dialogue: This is the conclusion of our story about A coffee...
+[VIDEO GENERATION] Payload contains 5 video inputs
+[VIDEO GENERATION] Full payload structure:
+  Scene 1: 'This is the opening of our story about A coffee shop owner discovers AI and doubles their bookings'
+  Scene 2: 'This is the background of our story about A coffee shop owner discovers AI and doubles their bookings'
+  Scene 3: 'This is the development of our story about A coffee shop owner discovers AI and doubles their bookings'
+  Scene 4: 'This is the climax of our story about A coffee shop owner discovers AI and doubles their bookings'
+  Scene 5: 'This is the conclusion of our story about A coffee shop owner discovers AI and doubles their bookings'
+Error polling status (attempt 4/240): [Errno -3] Temporary failure in name resolution
+Error polling status (attempt 5/240): [Errno -2] Name or service not known
+INFO:     127.0.0.1:47084 - "GET /status/15f9acde-7c3b-4527-9ed7-de99843c0bc2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52278 - "GET /status/15f9acde-7c3b-4527-9ed7-de99843c0bc2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:38638 - "GET /status/15f9acde-7c3b-4527-9ed7-de99843c0bc2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:38638 - "GET /status/15f9acde-7c3b-4527-9ed7-de99843c0bc2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:38638 - "GET /status/15f9acde-7c3b-4527-9ed7-de99843c0bc2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:38638 - "GET /status/15f9acde-7c3b-4527-9ed7-de99843c0bc2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:38638 - "GET /status/15f9acde-7c3b-4527-9ed7-de99843c0bc2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54604 - "GET /status/15f9acde-7c3b-4527-9ed7-de99843c0bc2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48820 - "GET /status/15f9acde-7c3b-4527-9ed7-de99843c0bc2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:44572 - "GET /status/15f9acde-7c3b-4527-9ed7-de99843c0bc2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:44584 - "GET /status/15f9acde-7c3b-4527-9ed7-de99843c0bc2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58122 - "GET /status/15f9acde-7c3b-4527-9ed7-de99843c0bc2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58122 - "GET /status/15f9acde-7c3b-4527-9ed7-de99843c0bc2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58122 - "GET /status/15f9acde-7c3b-4527-9ed7-de99843c0bc2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:43564 - "GET /status/15f9acde-7c3b-4527-9ed7-de99843c0bc2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:35304 - "GET /status/15f9acde-7c3b-4527-9ed7-de99843c0bc2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:35304 - "GET /status/15f9acde-7c3b-4527-9ed7-de99843c0bc2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:35310 - "GET /status/15f9acde-7c3b-4527-9ed7-de99843c0bc2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:35310 - "GET /status/15f9acde-7c3b-4527-9ed7-de99843c0bc2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:35310 - "GET /status/15f9acde-7c3b-4527-9ed7-de99843c0bc2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:35310 - "GET /status/15f9acde-7c3b-4527-9ed7-de99843c0bc2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57082 - "GET /status/15f9acde-7c3b-4527-9ed7-de99843c0bc2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:44476 - "GET /status/15f9acde-7c3b-4527-9ed7-de99843c0bc2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:44476 - "GET /status/15f9acde-7c3b-4527-9ed7-de99843c0bc2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:44476 - "GET /status/15f9acde-7c3b-4527-9ed7-de99843c0bc2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:41164 - "GET /status/15f9acde-7c3b-4527-9ed7-de99843c0bc2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55732 - "GET /status/15f9acde-7c3b-4527-9ed7-de99843c0bc2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:42226 - "GET /status/15f9acde-7c3b-4527-9ed7-de99843c0bc2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49662 - "GET /status/15f9acde-7c3b-4527-9ed7-de99843c0bc2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:44316 - "GET /status/15f9acde-7c3b-4527-9ed7-de99843c0bc2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:45372 - "GET /status/15f9acde-7c3b-4527-9ed7-de99843c0bc2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:38698 - "GET /status/15f9acde-7c3b-4527-9ed7-de99843c0bc2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:45338 - "GET /status/15f9acde-7c3b-4527-9ed7-de99843c0bc2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:36580 - "GET /status/15f9acde-7c3b-4527-9ed7-de99843c0bc2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:36580 - "GET /status/15f9acde-7c3b-4527-9ed7-de99843c0bc2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:40294 - "GET /status/15f9acde-7c3b-4527-9ed7-de99843c0bc2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55316 - "GET /status/15f9acde-7c3b-4527-9ed7-de99843c0bc2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55316 - "GET /status/15f9acde-7c3b-4527-9ed7-de99843c0bc2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:46102 - "GET /status/15f9acde-7c3b-4527-9ed7-de99843c0bc2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:46102 - "GET /status/15f9acde-7c3b-4527-9ed7-de99843c0bc2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58494 - "GET /status/15f9acde-7c3b-4527-9ed7-de99843c0bc2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58494 - "GET /status/15f9acde-7c3b-4527-9ed7-de99843c0bc2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53122 - "GET /status/15f9acde-7c3b-4527-9ed7-de99843c0bc2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:45708 - "GET /status/15f9acde-7c3b-4527-9ed7-de99843c0bc2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:38226 - "GET /status/15f9acde-7c3b-4527-9ed7-de99843c0bc2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54180 - "GET /status/15f9acde-7c3b-4527-9ed7-de99843c0bc2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54180 - "GET /status/15f9acde-7c3b-4527-9ed7-de99843c0bc2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54180 - "GET /status/15f9acde-7c3b-4527-9ed7-de99843c0bc2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:39236 - "GET /download/15f9acde-7c3b-4527-9ed7-de99843c0bc2 HTTP/1.1" 200 OK
+WARNING:  WatchFiles detected changes in 'video_generator.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [1534544]
+INFO:     Started server process [1712037]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'video_generator.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [1712037]
+INFO:     Started server process [1714286]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     127.0.0.1:55136 - "POST /generate HTTP/1.1" 200 OK
+[SCRIPT GENERATION] Starting for prompt: A coffee shop owner discovers AI and doubles their bookings in 30 days...
+[ERROR] Gemini API failed: Client error '400 Bad Request' for url 'https://generativelanguage.googleapis.com/v1/models/gemini-2.0-flash:generateContent?key=AIzaSyAmWgB2sNPMG4mCG1umcMc3uDRiCjnaFcE'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/400
+[FALLBACK] Using generic script for: A coffee shop owner discovers AI and doubles their...
+[WARNING] Using fallback script for: A coffee shop owner discovers AI and doubles their bookings in 30 days
+INFO:     127.0.0.1:50546 - "GET /status/08cd7b89-fb9c-490c-af52-e64e88d91b6c HTTP/1.1" 200 OK
+[VIDEO GENERATION] Starting with 5 scenes
+[SCENE 1] Dialogue: Let's explore A coffee shop owner discovers AI and...
+[SCENE 2] Dialogue: Understanding A coffee shop owner discovers AI and...
+[SCENE 3] Dialogue: What makes A coffee shop owner discovers AI and do...
+[SCENE 4] Dialogue: From its origins to its current impact A coffee sh...
+[SCENE 5] Dialogue: The future of A coffee shop owner discovers AI and...
+[VIDEO GENERATION] Payload contains 5 video inputs
+[VIDEO GENERATION] Full payload structure:
+  Scene 1: 'Let's explore A coffee shop owner discovers AI and doubles their bookings in 30 days and discover what'
+  Scene 2: 'Understanding A coffee shop owner discovers AI and doubles their bookings in 30 days requires looking at how'
+  Scene 3: 'What makes A coffee shop owner discovers AI and doubles their bookings in 30 days so remarkable isn't'
+  Scene 4: 'From its origins to its current impact A coffee shop owner discovers AI and doubles their bookings in'
+  Scene 5: 'The future of A coffee shop owner discovers AI and doubles their bookings in 30 days holds incredible'
+INFO:     127.0.0.1:51956 - "GET /status/08cd7b89-fb9c-490c-af52-e64e88d91b6c HTTP/1.1" 200 OK
+INFO:     127.0.0.1:45560 - "GET /status/08cd7b89-fb9c-490c-af52-e64e88d91b6c HTTP/1.1" 200 OK
+INFO:     127.0.0.1:44528 - "GET /download/08cd7b89-fb9c-490c-af52-e64e88d91b6c HTTP/1.1" 200 OK
+WARNING:  WatchFiles detected changes in 'video_generator.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [1714286]
+INFO:     Started server process [1827330]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'video_generator.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [1827330]
+WARNING:  WatchFiles detected changes in 'video_generator.py'. Reloading...
+Process SpawnProcess-16:
+Traceback (most recent call last):
+  File "/home/umar/miniconda3/lib/python3.13/multiprocessing/process.py", line 313, in _bootstrap
+    self.run()
+    ~~~~~~~~^^
+  File "/home/umar/miniconda3/lib/python3.13/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/umar/miniconda3/lib/python3.13/site-packages/uvicorn/_subprocess.py", line 80, in subprocess_started
+    target(sockets=sockets)
+    ~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/umar/miniconda3/lib/python3.13/site-packages/uvicorn/server.py", line 65, in run
+    return asyncio.run(self.serve(sockets=sockets))
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/umar/miniconda3/lib/python3.13/asyncio/runners.py", line 195, in run
+    return runner.run(main)
+           ~~~~~~~~~~^^^^^^
+  File "/home/umar/miniconda3/lib/python3.13/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "uvloop/loop.pyx", line 1518, in uvloop.loop.Loop.run_until_complete
+  File "/home/umar/miniconda3/lib/python3.13/site-packages/uvicorn/server.py", line 69, in serve
+    await self._serve(sockets)
+  File "/home/umar/miniconda3/lib/python3.13/site-packages/uvicorn/server.py", line 76, in _serve
+    config.load()
+    ~~~~~~~~~~~^^
+  File "/home/umar/miniconda3/lib/python3.13/site-packages/uvicorn/config.py", line 434, in load
+    self.loaded_app = import_from_string(self.app)
+                      ~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/home/umar/miniconda3/lib/python3.13/site-packages/uvicorn/importer.py", line 19, in import_from_string
+    module = importlib.import_module(module_str)
+  File "/home/umar/miniconda3/lib/python3.13/importlib/__init__.py", line 88, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 1026, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/umar/Desktop/video_generation_agent/main.py", line 34, in <module>
+    from video_generator import VideoGenerator, JobState, JobInfo
+  File "/home/umar/Desktop/video_generation_agent/video_generator.py", line 190
+    ).format(prompt=prompt    "Scene 4 (IMPACT): Show the significance. NEW words only - no repetition from any previous scene.\n"
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+SyntaxError: invalid syntax
+Process SpawnProcess-17:
+Traceback (most recent call last):
+  File "/home/umar/miniconda3/lib/python3.13/multiprocessing/process.py", line 313, in _bootstrap
+    self.run()
+    ~~~~~~~~^^
+  File "/home/umar/miniconda3/lib/python3.13/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/umar/miniconda3/lib/python3.13/site-packages/uvicorn/_subprocess.py", line 80, in subprocess_started
+    target(sockets=sockets)
+    ~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/umar/miniconda3/lib/python3.13/site-packages/uvicorn/server.py", line 65, in run
+    return asyncio.run(self.serve(sockets=sockets))
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/umar/miniconda3/lib/python3.13/asyncio/runners.py", line 195, in run
+    return runner.run(main)
+           ~~~~~~~~~~^^^^^^
+  File "/home/umar/miniconda3/lib/python3.13/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "uvloop/loop.pyx", line 1518, in uvloop.loop.Loop.run_until_complete
+  File "/home/umar/miniconda3/lib/python3.13/site-packages/uvicorn/server.py", line 69, in serve
+    await self._serve(sockets)
+  File "/home/umar/miniconda3/lib/python3.13/site-packages/uvicorn/server.py", line 76, in _serve
+    config.load()
+    ~~~~~~~~~~~^^
+  File "/home/umar/miniconda3/lib/python3.13/site-packages/uvicorn/config.py", line 434, in load
+    self.loaded_app = import_from_string(self.app)
+                      ~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/home/umar/miniconda3/lib/python3.13/site-packages/uvicorn/importer.py", line 19, in import_from_string
+    module = importlib.import_module(module_str)
+  File "/home/umar/miniconda3/lib/python3.13/importlib/__init__.py", line 88, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 1026, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/umar/Desktop/video_generation_agent/main.py", line 34, in <module>
+    from video_generator import VideoGenerator, JobState, JobInfo
+  File "/home/umar/Desktop/video_generation_agent/video_generator.py", line 190
+    ).format(prompt=prompt    "Scene 4 (IMPACT): Show the significance. NEW words only - no repetition from any previous scene.\n"
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+SyntaxError: invalid syntax

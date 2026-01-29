@@ -1,0 +1,11 @@
+# Python dependencies for the AI video generator
+fastapi
+uvicorn
+httpx
+python-dotenv
+pydantic
+
+# Testing dependencies
+pytest
+pytest-asyncio
+pytest-cov
