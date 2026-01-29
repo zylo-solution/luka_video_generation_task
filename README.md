@@ -21,7 +21,7 @@ The result is a captioned MP4 video ready for social media, with all jobs tracke
 
 1. **Clone the repository:**
    ```bash
-   git clone <repository-url>
+   git clone git@github.com:zylo-solution/luka_video_generation_task.git
    cd video_generation_agent
    ```
 
