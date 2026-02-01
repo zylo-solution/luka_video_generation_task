@@ -1,13 +1,29 @@
 # AI Documentary Video Generator
 
-This project implements a backend service that converts a plain English prompt into a 30‑second documentary‑style video. It demonstrates how multiple AI services can be orchestrated through a modern API:
+This project implements a full-stack application that converts a plain English prompt into a 30‑second documentary‑style video. It features a beautiful web frontend and demonstrates how multiple AI services can be orchestrated through a modern API:
 
 * **Google Gemini** – generates a five‑scene script from a user prompt
 * **HeyGen** – synthesizes a talking‑head video with lip‑synced avatar and ElevenLabs voice
 * **Submagic** – transcribes the generated video and burns in captions
 * **Redis** – provides persistent job storage across server restarts
+* **Web Frontend** – intuitive interface for video generation with real-time progress tracking
 
 The result is a captioned MP4 video ready for social media, with all jobs tracked asynchronously.
+
+### ⚡ TL;DR - Get Started in 3 Steps
+
+```bash
+# 1. Create .env file with your API keys
+cp .env.example .env
+# Edit .env and add your API keys
+
+# 2. Build and run with Docker Compose
+docker compose up --build
+
+# 3. Open http://localhost:3000 in your browser
+```
+
+That's it! The frontend, backend, and Redis will all start automatically. 🎉
 
 ---
 
@@ -22,26 +38,33 @@ The result is a captioned MP4 video ready for social media, with all jobs tracke
 1. **Clone the repository:**
    ```bash
    git clone git@github.com:zylo-solution/luka_video_generation_task.git
-   cd video_generation_agent
+   cd luka_video_generation_task
    ```
 
-2. **Create a `.env` file** with your API keys:
+2. **Create a `.env` file** from the example:
+   ```bash
+   cp .env.example .env
+   ```
+
+3. **Edit `.env` file** and add your API keys:
    ```env
    GEMINI_API_KEY=your_gemini_key_here
    HEYGEN_API_KEY=your_heygen_key_here
    SUBMAGIC_API_KEY=your_submagic_key_here
    ```
 
-3. **Build and run with Docker Compose:**
+4. **Build and run with Docker Compose:**
    ```bash
    docker compose up --build
    ```
 
-4. **Access the Swagger UI:**
+5. **Access the application:**
    
-   Open your browser to **http://localhost:8000/docs**
+   - **Web Frontend:** Open your browser to **http://localhost:3000**
+   - **API Documentation (Swagger UI):** **http://localhost:8000/docs**
+   - **Backend API:** **http://localhost:8000**
 
-That's it! The application runs with Redis for persistent job storage.
+That's it! The application runs with Redis for persistent job storage, the backend API on port 8000, and the frontend on port 3000.
 
 ### Managing Services
 
@@ -49,8 +72,12 @@ That's it! The application runs with Redis for persistent job storage.
 # Stop services
 docker compose down
 
-# View logs
+# View logs for all services
+docker compose logs -f
+
+# View logs for specific service
 docker compose logs -f video-generator
+docker compose logs -f frontend
 
 # Restart a service
 docker compose restart video-generator
@@ -58,6 +85,41 @@ docker compose restart video-generator
 # View all running containers
 docker compose ps
 ```
+
+---
+
+## 🎨 Using the Web Frontend
+
+The easiest way to generate videos is through the web interface at **http://localhost:3000**
+
+### Steps:
+
+1. **Open the frontend** in your browser: `http://localhost:3000`
+
+2. **Enter your prompt** in the text area, for example:
+   - "A coffee shop owner discovers AI"
+   - "The future of renewable energy"
+   - "AI transforming healthcare"
+
+3. **Click "Generate Video"** button
+
+4. **Monitor progress** in real-time:
+   - Job ID and creation time are displayed
+   - Progress bar shows completion percentage
+   - Status updates automatically (Pending → Processing → Complete)
+
+5. **View and Download:**
+   - Once complete, the video plays automatically
+   - Click the "📥 Download Video" button to save it locally
+
+### Features:
+
+✅ Real-time progress tracking  
+✅ Automatic status polling  
+✅ In-browser video playback  
+✅ One-click download  
+✅ Beautiful, responsive UI  
+✅ Error handling and notifications  
 
 ---
 
@@ -105,12 +167,26 @@ curl http://localhost:8000/download/JOB_ID
 
 ## 🧪 Running Tests
 
-The project includes a comprehensive test suite covering API endpoints, job storage, and video generation logic.
+The project includes a comprehensive test suite covering API endpoints, job storage, video generation logic, and frontend integration.
+
+### Prerequisites for Testing
+
+Make sure the application is running first:
+```bash
+# Create .env file with your API keys
+cp .env.example .env
+# Edit .env and add your keys
+
+# Start all services
+docker compose up --build
+```
 
 ### Run Tests with Docker
 
+Once the services are running, open a new terminal and run tests:
+
 ```bash
-# Run all tests
+# Run all backend tests (in Docker container)
 docker compose exec video-generator pytest tests/ -v
 
 # Run specific test file
@@ -121,6 +197,28 @@ docker compose exec video-generator pytest tests/ --cov=. --cov-report=html
 
 # Run specific test class
 docker compose exec video-generator pytest tests/test_api.py::TestGenerateEndpoint -v
+```
+
+### Run Frontend Integration Tests
+
+Frontend integration tests run from your host machine (not in Docker):
+
+```bash
+# Run frontend integration tests
+pytest tests/test_frontend_integration.py -v
+
+# Run with detailed output
+pytest tests/test_frontend_integration.py -v --tb=short
+```
+
+### Run All Tests (Full Test Suite)
+
+```bash
+# Run frontend tests (from host)
+pytest tests/test_frontend_integration.py -v
+
+# Run backend tests (in Docker)
+docker compose exec video-generator pytest tests/ -v
 ```
 
 ### Run Tests Locally (without Docker)
@@ -146,8 +244,17 @@ The test suite validates:
 - ✅ Request/response schemas
 - ✅ Multiple concurrent jobs
 - ✅ OpenAPI documentation availability
+- ✅ Frontend HTML serving and UI elements
+- ✅ Frontend-backend communication via CORS
+- ✅ Cross-origin request handling
+- ✅ Job status polling and progress tracking
+- ✅ Full end-to-end workflow
 
 **Test Results:**
+- Frontend Integration Tests: 21 tests
+- Backend API Tests: 15 tests
+- Video Generator Tests: 5 tests
+- **Total: 41 tests**
 ```
 20 passed in 0.99s
 ```
@@ -161,27 +268,47 @@ See [tests/README.md](tests/README.md) for detailed test documentation.
 ### Docker Architecture
 
 ```
-┌──────────────────────────────────────────────┐
-│         Docker Compose Stack                 │
-│                                              │
-│  ┌────────────────┐    ┌────────────────┐  │
-│  │  FastAPI App   │───▶│  Redis Server  │  │
-│  │  (Port 8000)   │    │  (Port 6379)   │  │
-│  │                │    │                │  │
-│  │  - Swagger UI  │    │  Persistent    │  │
-│  │  - Job Storage │    │  Volume        │  │
-│  │  - Generator   │    │                │  │
-│  └────────────────┘    └────────────────┘  │
-│         │                                   │
-│         ▼                                   │
-│  ┌──────────────────────────────────────┐  │
-│  │      External APIs                   │  │
-│  │  - Gemini (Script Generation)       │  │
-│  │  - HeyGen (Video + ElevenLabs Voice)│  │
-│  │  - Submagic (Caption Burn-in)       │  │
-│  └──────────────────────────────────────┘  │
-└──────────────────────────────────────────────┘
+┌─────────────────────────────────────────────────────────┐
+│              Docker Compose Stack                       │
+│                                                         │
+│  ┌────────────────┐    ┌────────────────┐             │
+│  │  Web Frontend  │───▶│  FastAPI App   │───┐         │
+│  │  (Port 3000)   │    │  (Port 8000)   │   │         │
+│  │                │    │                │   │         │
+│  │  Nginx Server  │    │  - Swagger UI  │   │         │
+│  │  index.html    │    │  - Job Storage │   │         │
+│  │                │    │  - Generator   │   ▼         │
+│  └────────────────┘    └────────────────┘  ┌────────┐ │
+│                                            │ Redis  │ │
+│                                            │ Server │ │
+│                                            └────────┘ │
+│                            │                          │
+│                            ▼                          │
+│      ┌──────────────────────────────────────┐        │
+│      │      External APIs                   │        │
+│      │  - Gemini (Script Generation)       │        │
+│      │  - HeyGen (Video + ElevenLabs Voice)│        │
+│      │  - Submagic (Caption Burn-in)       │        │
+│      └──────────────────────────────────────┘        │
+└─────────────────────────────────────────────────────────┘
 ```
+
+### Services:
+
+1. **Frontend (Port 3000)**
+   - Nginx serving static HTML
+   - Real-time progress tracking
+   - Video playback and download
+
+2. **Backend API (Port 8000)**
+   - FastAPI with CORS enabled
+   - RESTful endpoints
+   - Async job processing
+
+3. **Redis (Port 6379)**
+   - Job persistence
+   - 24-hour TTL
+   - Automatic failover
 
 ### Application Architecture
 
@@ -190,6 +317,7 @@ The service is organized into modular components:
 * **API layer (main.py)** – FastAPI application with three endpoints
   - Enqueues jobs and returns immediately
   - Background task processing via asyncio
+  - CORS middleware for frontend access
   
 * **Pipeline layer (video_generator.py)** – VideoGenerator class
   - Generates structured script via Gemini
@@ -201,6 +329,11 @@ The service is organized into modular components:
   - Persists jobs in Redis with 24-hour expiration
   - Falls back to in-memory storage if Redis unavailable
   - Survives server restarts and code changes
+
+* **Frontend layer (frontend/index.html)** – Web interface
+  - Single-page application
+  - Polls backend for status updates
+  - Displays videos with download capability
 
 ### Job States
 
@@ -432,10 +565,12 @@ video_generation_agent/
 ├── job_storage.py          # Redis storage layer
 ├── requirements.txt        # Python dependencies
 ├── requirements-redis.txt  # Redis client
-├── docker-compose.yaml     # Docker orchestration
+├── docker-compose.yaml     # Docker orchestration (3 services)
 ├── Dockerfile              # Container image
 ├── pytest.ini              # Test configuration
 ├── .env                    # API keys (not in git)
+├── frontend/               # Web frontend
+│   └── index.html         # Single-page application
 ├── tests/
 │   ├── __init__.py
 │   ├── test_api.py        # API integration tests
@@ -443,6 +578,26 @@ video_generation_agent/
 │   └── README.md          # Test documentation
 └── README.md              # This file
 ```
+
+### Docker Services
+
+The application runs three services in Docker:
+
+1. **redis** (Port 6379)
+   - Redis 7 Alpine
+   - Persistent storage with volumes
+   - Health checks enabled
+
+2. **video-generator** (Port 8000)
+   - FastAPI backend
+   - Hot reload for development
+   - Connects to Redis
+   - Exposes API endpoints
+
+3. **frontend** (Port 3000)
+   - Nginx Alpine serving static HTML
+   - Web interface for video generation
+   - Communicates with backend API
 
 ### Adding New Features
 
@@ -471,6 +626,7 @@ For production environments, consider:
    - Use secrets management (AWS Secrets Manager, HashiCorp Vault)
    - Enable HTTPS with reverse proxy (nginx, Traefik)
    - Add rate limiting and request validation
+   - Configure specific CORS origins instead of "*"
 
 2. **Scalability**
    - Use gunicorn with multiple workers

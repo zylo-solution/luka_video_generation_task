@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Documentary Video Generator</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            max-width: 800px;
+            width: 100%;
+            padding: 40px;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 10px;
+            font-size: 2em;
+            text-align: center;
+        }
+
+        .subtitle {
+            color: #666;
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 1em;
+        }
+
+        .input-section {
+            margin-bottom: 30px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            color: #333;
+            font-weight: 600;
+        }
+
+        textarea {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            font-size: 16px;
+            font-family: inherit;
+            resize: vertical;
+            min-height: 100px;
+            transition: border-color 0.3s;
+        }
+
+        textarea:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        .button {
+            width: 100%;
+            padding: 15px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .button:hover:not(:disabled) {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
+        }
+
+        .button:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+
+        .status-section {
+            margin-top: 30px;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            display: none;
+        }
+
+        .status-section.active {
+            display: block;
+        }
+
+        .status-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .status-label {
+            font-weight: 600;
+            color: #333;
+        }
+
+        .status-value {
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .status-pending {
+            background: #fff3cd;
+            color: #856404;
+        }
+
+        .status-processing {
+            background: #cce5ff;
+            color: #004085;
+        }
+
+        .status-complete {
+            background: #d4edda;
+            color: #155724;
+        }
+
+        .status-error {
+            background: #f8d7da;
+            color: #721c24;
+        }
+
+        .progress-container {
+            width: 100%;
+            height: 30px;
+            background: #e0e0e0;
+            border-radius: 15px;
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+
+        .progress-bar {
+            height: 100%;
+            background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+            transition: width 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        .job-info {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 10px;
+        }
+
+        .job-info strong {
+            color: #333;
+        }
+
+        .video-container {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        video {
+            width: 100%;
+            max-width: 640px;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .download-button {
+            margin-top: 15px;
+            padding: 12px 30px;
+            background: #28a745;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: background 0.3s, transform 0.2s;
+        }
+
+        .download-button:hover {
+            background: #218838;
+            transform: translateY(-2px);
+        }
+
+        .error-message {
+            background: #f8d7da;
+            color: #721c24;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 15px;
+            border: 1px solid #f5c6cb;
+        }
+
+        .spinner {
+            border: 3px solid #f3f3f3;
+            border-top: 3px solid #667eea;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 20px auto;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .info-box {
+            background: #e7f3ff;
+            border-left: 4px solid #2196F3;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            font-size: 14px;
+            color: #0d47a1;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎬 AI Documentary Generator</h1>
+        <p class="subtitle">Transform your ideas into captioned 30-second documentary videos</p>
+
+        <div class="info-box">
+            💡 Enter a prompt describing your documentary topic. AI will generate a script, create a talking-head video with lip-synced avatar, and add captions automatically.
+        </div>
+
+        <div class="input-section">
+            <label for="prompt">Your Video Prompt</label>
+            <textarea 
+                id="prompt" 
+                placeholder="e.g., 'A coffee shop owner discovers AI' or 'The future of renewable energy'"
+            ></textarea>
+        </div>
+
+        <button id="generateBtn" class="button">
+            Generate Video
+        </button>
+
+        <div id="statusSection" class="status-section">
+            <div class="status-header">
+                <span class="status-label">Status:</span>
+                <span id="statusBadge" class="status-value status-pending">Pending</span>
+            </div>
+
+            <div class="job-info">
+                <strong>Job ID:</strong> <span id="jobId">-</span>
+            </div>
+
+            <div class="job-info">
+                <strong>Created:</strong> <span id="createdAt">-</span>
+            </div>
+
+            <div class="progress-container">
+                <div id="progressBar" class="progress-bar" style="width: 0%">0%</div>
+            </div>
+
+            <div id="errorMessage" class="error-message" style="display: none;"></div>
+
+            <div id="videoContainer" class="video-container" style="display: none;">
+                <video id="videoPlayer" controls></video>
+                <br>
+                <a id="downloadBtn" class="download-button" download="documentary.mp4">
+                    📥 Download Video
+                </a>
+            </div>
+
+            <div id="spinner" class="spinner" style="display: none;"></div>
+        </div>
+    </div>
+
+    <script>
+        const API_BASE_URL = 'http://localhost:8000';
+        
+        let currentJobId = null;
+        let pollInterval = null;
+
+        const elements = {
+            prompt: document.getElementById('prompt'),
+            generateBtn: document.getElementById('generateBtn'),
+            statusSection: document.getElementById('statusSection'),
+            statusBadge: document.getElementById('statusBadge'),
+            jobId: document.getElementById('jobId'),
+            createdAt: document.getElementById('createdAt'),
+            progressBar: document.getElementById('progressBar'),
+            errorMessage: document.getElementById('errorMessage'),
+            videoContainer: document.getElementById('videoContainer'),
+            videoPlayer: document.getElementById('videoPlayer'),
+            downloadBtn: document.getElementById('downloadBtn'),
+            spinner: document.getElementById('spinner')
+        };
+
+        elements.generateBtn.addEventListener('click', generateVideo);
+
+        async function generateVideo() {
+            const prompt = elements.prompt.value.trim();
+            
+            if (!prompt) {
+                alert('Please enter a prompt for your video');
+                return;
+            }
+
+            // Reset UI
+            elements.generateBtn.disabled = true;
+            elements.generateBtn.textContent = 'Generating...';
+            elements.statusSection.classList.add('active');
+            elements.videoContainer.style.display = 'none';
+            elements.errorMessage.style.display = 'none';
+            elements.spinner.style.display = 'block';
+
+            try {
+                const response = await fetch(`${API_BASE_URL}/generate`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ prompt })
+                });
+
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+
+                const data = await response.json();
+                currentJobId = data.job_id;
+                
+                elements.jobId.textContent = currentJobId;
+                
+                // Start polling for status
+                startPolling();
+                
+            } catch (error) {
+                console.error('Error generating video:', error);
+                showError(`Failed to generate video: ${error.message}`);
+                resetUI();
+            }
+        }
+
+        function startPolling() {
+            // Clear any existing interval
+            if (pollInterval) {
+                clearInterval(pollInterval);
+            }
+
+            // Poll immediately
+            checkStatus();
+
+            // Then poll every 2 seconds
+            pollInterval = setInterval(checkStatus, 2000);
+        }
+
+        async function checkStatus() {
+            if (!currentJobId) return;
+
+            try {
+                const response = await fetch(`${API_BASE_URL}/status/${currentJobId}`);
+                
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+
+                const data = await response.json();
+                updateStatus(data);
+
+                // If job is complete or errored, stop polling
+                if (data.status === 'complete' || data.status === 'error') {
+                    clearInterval(pollInterval);
+                    elements.spinner.style.display = 'none';
+                    
+                    if (data.status === 'complete') {
+                        loadVideo();
+                    } else if (data.error) {
+                        showError(data.error);
+                    }
+                }
+
+            } catch (error) {
+                console.error('Error checking status:', error);
+                showError(`Failed to check status: ${error.message}`);
+                clearInterval(pollInterval);
+                elements.spinner.style.display = 'none';
+            }
+        }
+
+        function updateStatus(data) {
+            // Update status badge
+            elements.statusBadge.textContent = data.status;
+            elements.statusBadge.className = `status-value status-${data.status}`;
+
+            // Update progress bar
+            const progress = Math.round(data.progress * 100);
+            elements.progressBar.style.width = `${progress}%`;
+            elements.progressBar.textContent = `${progress}%`;
+
+            // Update created time
+            if (data.created_at) {
+                const date = new Date(data.created_at);
+                elements.createdAt.textContent = date.toLocaleString();
+            }
+        }
+
+        async function loadVideo() {
+            try {
+                const response = await fetch(`${API_BASE_URL}/download/${currentJobId}`);
+                
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+
+                const data = await response.json();
+
+                if (data.video_url) {
+                    elements.videoPlayer.src = data.video_url;
+                    elements.downloadBtn.href = data.video_url;
+                    elements.videoContainer.style.display = 'block';
+                    resetUI();
+                } else if (data.message) {
+                    showError(data.message);
+                }
+
+            } catch (error) {
+                console.error('Error loading video:', error);
+                showError(`Failed to load video: ${error.message}`);
+            }
+        }
+
+        function showError(message) {
+            elements.errorMessage.textContent = message;
+            elements.errorMessage.style.display = 'block';
+            resetUI();
+        }
+
+        function resetUI() {
+            elements.generateBtn.disabled = false;
+            elements.generateBtn.textContent = 'Generate Video';
+            elements.spinner.style.display = 'none';
+        }
+
+        // Clean up on page unload
+        window.addEventListener('beforeunload', () => {
+            if (pollInterval) {
+                clearInterval(pollInterval);
+            }
+        });
+    </script>
+</body>
+</html>
