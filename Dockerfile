@@ -25,7 +25,6 @@ RUN pip install --no-cache-dir -r requirements.txt -r requirements-redis.txt
 COPY main.py .
 COPY video_generator.py .
 COPY job_storage.py .
-COPY .env .
 
 # Copy tests
 COPY tests/ ./tests/

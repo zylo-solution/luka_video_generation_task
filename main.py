@@ -29,6 +29,7 @@ from typing import Dict
 
 from dotenv import load_dotenv
 from fastapi import FastAPI, HTTPException
+from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel, Field
 
 from video_generator import VideoGenerator, JobState, JobInfo
@@ -39,6 +40,15 @@ load_dotenv()
 
 
 app = FastAPI(title="AI Video Generator", version="1.0.0")
+
+# Add CORS middleware to allow frontend access
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # In production, specify your frontend domain
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 # Persistent job storage with Redis backend (falls back to in-memory if unavailable)
 job_storage = JobStorage()

@@ -52,6 +52,19 @@ services:
       retries: 3
       start_period: 10s
 
+  frontend:
+    image: nginx:alpine
+    container_name: video-gen-frontend
+    ports:
+      - "3000:80"
+    volumes:
+      - ./frontend:/usr/share/nginx/html:ro
+    depends_on:
+      - video-generator
+    restart: unless-stopped
+    networks:
+      - video-gen-network
+
 networks:
   video-gen-network:
     driver: bridge
