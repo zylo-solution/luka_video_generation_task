@@ -58,7 +58,7 @@ services:
     image: nginx:alpine
     container_name: video-gen-frontend
     ports:
-      - "3000:80"
+      - "3434:80"
     volumes:
       - ./frontend:/usr/share/nginx/html:ro
     depends_on:

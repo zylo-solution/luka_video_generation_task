@@ -20,7 +20,7 @@ cp .env.example .env
 # 2. Build and run with Docker Compose
 docker compose up --build
 
-# 3. Open http://localhost:3000 in your browser
+# 3. Open http://localhost:3434 in your browser
 ```
 
 That's it! The frontend, backend, and Redis will all start automatically. 🎉
@@ -60,11 +60,11 @@ That's it! The frontend, backend, and Redis will all start automatically. 🎉
 
 5. **Access the application:**
    
-   - **Web Frontend:** Open your browser to **http://localhost:3000**
+   - **Web Frontend:** Open your browser to **http://localhost:3434**
    - **API Documentation (Swagger UI):** **http://localhost:8000/docs**
    - **Backend API:** **http://localhost:8000**
 
-That's it! The application runs with Redis for persistent job storage, the backend API on port 8000, and the frontend on port 3000.
+That's it! The application runs with Redis for persistent job storage, the backend API on port 8000, and the frontend on port 3434.
 
 ### Managing Services
 
@@ -90,11 +90,11 @@ docker compose ps
 
 ## 🎨 Using the Web Frontend
 
-The easiest way to generate videos is through the web interface at **http://localhost:3000**
+The easiest way to generate videos is through the web interface at **http://localhost:3434**
 
 ### Steps:
 
-1. **Open the frontend** in your browser: `http://localhost:3000`
+1. **Open the frontend** in your browser: `http://localhost:3434`
 
 2. **Enter your prompt** in the text area, for example:
    - "A coffee shop owner discovers AI"
@@ -273,7 +273,7 @@ See [tests/README.md](tests/README.md) for detailed test documentation.
 │                                                         │
 │  ┌────────────────┐    ┌────────────────┐             │
 │  │  Web Frontend  │───▶│  FastAPI App   │───┐         │
-│  │  (Port 3000)   │    │  (Port 8000)   │   │         │
+│  │  (Port 3434)   │    │  (Port 8000)   │   │         │
 │  │                │    │                │   │         │
 │  │  Nginx Server  │    │  - Swagger UI  │   │         │
 │  │  index.html    │    │  - Job Storage │   │         │
@@ -295,7 +295,7 @@ See [tests/README.md](tests/README.md) for detailed test documentation.
 
 ### Services:
 
-1. **Frontend (Port 3000)**
+1. **Frontend (Port 3434)**
    - Nginx serving static HTML
    - Real-time progress tracking
    - Video playback and download
@@ -594,7 +594,7 @@ The application runs three services in Docker:
    - Connects to Redis
    - Exposes API endpoints
 
-3. **frontend** (Port 3000)
+3. **frontend** (Port 3434)
    - Nginx Alpine serving static HTML
    - Web interface for video generation
    - Communicates with backend API

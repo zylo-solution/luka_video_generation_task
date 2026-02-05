@@ -15,7 +15,7 @@ from typing import Dict
 
 
 BASE_URL = "http://localhost:8000"
-FRONTEND_URL = "http://localhost:3000"
+FRONTEND_URL = "http://localhost:3434"
 
 
 class TestFrontendIntegration:

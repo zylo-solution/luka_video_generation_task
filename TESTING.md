@@ -81,7 +81,7 @@ The test suite validates:
 
 ## Manual Testing via Browser
 
-1. Open **http://localhost:3000** in your browser
+1. Open **http://localhost:3434** in your browser
 2. Enter a prompt (e.g., "A coffee shop owner discovers AI")
 3. Click "Generate Video"
 4. Watch the progress bar update in real-time
