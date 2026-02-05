@@ -29,7 +29,9 @@ class JobStorage:
         
         # Try to connect to Redis
         if REDIS_AVAILABLE:
-            redis_url = os.getenv("REDIS_URL", "redis://redis:6379/0")
+            # redis_url = os.getenv("REDIS_URL", "redis://redis:6379/0")
+            redis_url = os.getenv("REDIS_URL", "redis://127.0.0.1:6379/0")
+
             try:
                 self.redis_client = redis.from_url(
                     redis_url,

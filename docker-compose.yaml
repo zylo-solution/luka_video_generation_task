@@ -1,20 +1,20 @@
 services:
-  redis:
-    image: redis:7-alpine
-    container_name: video-gen-redis
-    ports:
-      - "6379:6379"
-    volumes:
-      - redis-data:/data
-    command: redis-server --appendonly yes
-    restart: unless-stopped
-    networks:
-      - video-gen-network
-    healthcheck:
-      test: ["CMD", "redis-cli", "ping"]
-      interval: 10s
-      timeout: 3s
-      retries: 3
+  # redis:
+  #   image: redis:7-alpine
+  #   container_name: video-gen-redis
+  #   ports:
+  #     - "6379:6379"
+  #   volumes:
+  #     - redis-data:/data
+  #   command: redis-server --appendonly yes
+  #   restart: unless-stopped
+  #   networks:
+  #     - video-gen-network
+  #   healthcheck:
+  #     test: ["CMD", "redis-cli", "ping"]
+  #     interval: 10s
+  #     timeout: 3s
+  #     retries: 3
 
   video-generator:
     build:
@@ -30,7 +30,9 @@ services:
       - ELEVENLABS_API_KEY=${ELEVENLABS_API_KEY}
       - REPLICATE_API_TOKEN=${REPLICATE_API_TOKEN}
       - LUMA_API_KEY=${LUMA_API_KEY}
-      - REDIS_URL=redis://redis:6379/0
+      - REDIS_URL=redis://host.docker.internal:6379/0
+
+      # - REDIS_URL=redis://redis:6379/0
     env_file:
       - .env
     volumes:
@@ -39,9 +41,9 @@ services:
       - ./video_generator.py:/app/video_generator.py
       - ./job_storage.py:/app/job_storage.py
       - ./logs:/app/logs
-    depends_on:
-      redis:
-        condition: service_healthy
+    # depends_on:
+    #   redis:
+    #     condition: service_healthy
     restart: unless-stopped
     networks:
       - video-gen-network
@@ -62,12 +64,13 @@ services:
     depends_on:
       - video-generator
     restart: unless-stopped
-    networks:
-      - video-gen-network
+    
+    # networks:
+    #   - video-gen-network
 
 networks:
   video-gen-network:
     driver: bridge
 
-volumes:
-  redis-data:
+# volumes:
+#   redis-data:
