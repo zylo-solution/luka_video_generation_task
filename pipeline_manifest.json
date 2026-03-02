@@ -1,0 +1,38 @@
+[
+  {
+    "element": "AIR",
+    "status": "video_failed",
+    "video": null,
+    "music": null
+  },
+  {
+    "element": "WATER",
+    "status": "skipped_no_credits",
+    "video": null,
+    "music": null
+  },
+  {
+    "element": "EARTH",
+    "status": "skipped_no_credits",
+    "video": null,
+    "music": null
+  },
+  {
+    "element": "FIRE",
+    "status": "skipped_no_credits",
+    "video": null,
+    "music": null
+  },
+  {
+    "element": "SCIENCE",
+    "status": "skipped_no_credits",
+    "video": null,
+    "music": null
+  },
+  {
+    "element": "COSMOS",
+    "status": "skipped_no_credits",
+    "video": null,
+    "music": null
+  }
+]

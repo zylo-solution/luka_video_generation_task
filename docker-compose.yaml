@@ -1,0 +1,45 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile.backend
+    container_name: video_generation_backend
+    environment:
+      - KIEAI_API_KEY=${KIEAI_API_KEY}
+    volumes:
+      - ./jobs:/app/jobs
+      - ./avatar_outputs:/app/avatar_outputs
+      - ./music_outputs:/app/music_outputs
+      - ./video_outputs:/app/video_outputs
+    ports:
+      - "8000:8000"
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/docs"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile.frontend
+    container_name: video_generation_frontend
+    ports:
+      - "3000:80"
+    depends_on:
+      - backend
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:80"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+volumes:
+  jobs_data:
+  avatar_data:
+  music_data:
+  video_data:

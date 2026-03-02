@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Video Generation Platform</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .header h1 {
+            color: #333;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .header p {
+            color: #666;
+            font-size: 1.1rem;
+        }
+
+        .form-section {
+            margin-bottom: 30px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #333;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        .prompt-input {
+            width: 100%;
+            min-height: 120px;
+            padding: 15px;
+            border: 2px solid #e1e1e1;
+            border-radius: 10px;
+            font-size: 16px;
+            font-family: inherit;
+            resize: vertical;
+            transition: border-color 0.3s ease;
+        }
+
+        .prompt-input:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 15px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+        }
+
+        .submit-btn:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+            transform: none;
+            box-shadow: none;
+        }
+
+        .status-section {
+            display: none;
+            margin-top: 30px;
+            padding: 25px;
+            background: #f8f9fa;
+            border-radius: 15px;
+            border-left: 4px solid #667eea;
+        }
+
+        .job-id {
+            font-family: 'Courier New', monospace;
+            background: rgba(102, 126, 234, 0.1);
+            padding: 8px 12px;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+            display: inline-block;
+        }
+
+        .progress-container {
+            margin: 20px 0;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 25px;
+            background: #e1e1e1;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            transition: width 0.5s ease;
+            border-radius: 12px;
+            position: relative;
+        }
+
+        .progress-fill:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            animation: shimmer 2s infinite;
+        }
+
+        @keyframes shimmer {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+
+        .progress-text {
+            text-align: center;
+            margin-top: 10px;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .status-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 15px 0;
+        }
+
+        .status-item {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .status-item strong {
+            color: #667eea;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .logs-section {
+            margin-top: 20px;
+        }
+
+        .logs-container {
+            background: #2d3748;
+            color: #e2e8f0;
+            padding: 20px;
+            border-radius: 10px;
+            max-height: 300px;
+            overflow-y: auto;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+            line-height: 1.4;
+        }
+
+        .log-line {
+            margin-bottom: 5px;
+            word-wrap: break-word;
+        }
+
+        .video-section {
+            display: none;
+            margin-top: 30px;
+            text-align: center;
+            padding: 25px;
+            background: #f8f9fa;
+            border-radius: 15px;
+            border-left: 4px solid #28a745;
+        }
+
+        .video-container {
+            margin: 20px 0;
+        }
+
+        .video-player {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .download-btn {
+            display: inline-block;
+            padding: 12px 25px;
+            background: #28a745;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            margin-top: 15px;
+            transition: background-color 0.3s ease;
+        }
+
+        .download-btn:hover {
+            background: #218838;
+        }
+
+        .error-section {
+            display: none;
+            margin-top: 30px;
+            padding: 20px;
+            background: #f8d7da;
+            border: 1px solid #f5c6cb;
+            border-radius: 10px;
+            color: #721c24;
+        }
+
+        .loading {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 3px solid #f3f3f3;
+            border-top: 3px solid #667eea;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin-left: 10px;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { opacity: 1; }
+            50% { opacity: 0.7; }
+            100% { opacity: 1; }
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                margin: 10px;
+                padding: 20px;
+            }
+
+            .header h1 {
+                font-size: 2rem;
+            }
+
+            .status-info {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🎬 AI Video Generator</h1>
+            <p>Create amazing videos with AI - Gemini → Flux → Veo Pipeline</p>
+        </div>
+
+        <div class="form-section" id="formSection">
+            <div class="form-group">
+                <label for="promptInput">Enter your video prompt:</label>
+                <textarea 
+                    id="promptInput" 
+                    class="prompt-input" 
+                    placeholder="Describe the video you want to create. For example: 'A mystical journey through the elements of nature, exploring the harmony between ancient wisdom and modern discovery'"
+                    required
+                ></textarea>
+            </div>
+            <button id="submitBtn" class="submit-btn">
+                Generate Video ✨
+            </button>
+        </div>
+
+        <div class="status-section" id="statusSection">
+            <h2>🚀 Processing Your Video</h2>
+            <div class="job-id" id="jobId"></div>
+            
+            <div class="progress-container">
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressFill" style="width: 0%"></div>
+                </div>
+                <div class="progress-text" id="progressText">0%</div>
+            </div>
+
+            <div class="status-info">
+                <div class="status-item">
+                    <strong>Status:</strong>
+                    <span id="statusValue">-</span>
+                </div>
+                <div class="status-item">
+                    <strong>Current Step:</strong>
+                    <span id="stepValue">-</span>
+                </div>
+                <div class="status-item">
+                    <strong>Progress:</strong>
+                    <span id="progressValue">0%</span>
+                </div>
+                <div class="status-item">
+                    <strong>Output Ready:</strong>
+                    <span id="outputReady">No</span>
+                </div>
+            </div>
+
+            <div class="logs-section">
+                <h3>📋 Processing Logs</h3>
+                <div class="logs-container" id="logsContainer">
+                    <div class="log-line">Waiting for updates...</div>
+                </div>
+            </div>
+
+            <button id="cancelBtn" class="submit-btn" style="background: #dc3545; margin-top: 20px;" onclick="cancelJob()">
+                Cancel Job
+            </button>
+        </div>
+
+        <div class="video-section" id="videoSection">
+            <h2>🎉 Your Video is Ready!</h2>
+            <div class="video-container">
+                <video id="videoPlayer" class="video-player" controls>
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <a id="downloadLink" class="download-btn" download>
+                📥 Download Video
+            </a>
+            <br><br>
+            <button class="submit-btn" onclick="createNewVideo()" style="background: #667eea;">
+                Create Another Video
+            </button>
+        </div>
+
+        <div class="error-section" id="errorSection">
+            <h3>❌ Error</h3>
+            <p id="errorMessage"></p>
+            <button class="submit-btn" onclick="resetForm()" style="background: #667eea; margin-top: 15px;">
+                Try Again
+            </button>
+        </div>
+    </div>
+
+    <script>
+        const API_BASE = '/api';  // This will be proxied to the backend in Docker
+        let currentJobId = null;
+        let statusInterval = null;
+
+        // DOM elements
+        const formSection = document.getElementById('formSection');
+        const statusSection = document.getElementById('statusSection');
+        const videoSection = document.getElementById('videoSection');
+        const errorSection = document.getElementById('errorSection');
+        
+        const promptInput = document.getElementById('promptInput');
+        const submitBtn = document.getElementById('submitBtn');
+        const jobIdElement = document.getElementById('jobId');
+        const progressFill = document.getElementById('progressFill');
+        const progressText = document.getElementById('progressText');
+        const statusValue = document.getElementById('statusValue');
+        const stepValue = document.getElementById('stepValue');
+        const progressValue = document.getElementById('progressValue');
+        const outputReady = document.getElementById('outputReady');
+        const logsContainer = document.getElementById('logsContainer');
+        const videoPlayer = document.getElementById('videoPlayer');
+        const downloadLink = document.getElementById('downloadLink');
+        const errorMessage = document.getElementById('errorMessage');
+
+        // Submit form
+        document.getElementById('submitBtn').addEventListener('click', async () => {
+            const prompt = promptInput.value.trim();
+            if (!prompt) {
+                alert('Please enter a prompt');
+                return;
+            }
+
+            hideAllSections();
+            statusSection.style.display = 'block';
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = 'Generating... <div class="loading"></div>';
+
+            try {
+                const response = await fetch(`${API_BASE}/jobs`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ prompt }),
+                });
+
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+
+                const data = await response.json();
+                currentJobId = data.job_id;
+                jobIdElement.textContent = `Job ID: ${currentJobId}`;
+                
+                // Start polling for status
+                startStatusPolling();
+
+            } catch (error) {
+                console.error('Error creating job:', error);
+                showError('Failed to create job: ' + error.message);
+                resetForm();
+            }
+        });
+
+        function startStatusPolling() {
+            if (statusInterval) {
+                clearInterval(statusInterval);
+            }
+
+            const pollStatus = async () => {
+                if (!currentJobId) return;
+
+                try {
+                    const response = await fetch(`${API_BASE}/jobs/${currentJobId}`);
+                    
+                    if (!response.ok) {
+                        if (response.status === 404) {
+                            showError('Job not found');
+                            return;
+                        }
+                        throw new Error(`HTTP error! status: ${response.status}`);
+                    }
+
+                    const data = await response.json();
+                    updateStatus(data);
+
+                } catch (error) {
+                    console.error('Error polling status:', error);
+                    showError('Error checking status: ' + error.message);
+                }
+            };
+
+            // Poll immediately, then every 2 seconds
+            pollStatus();
+            statusInterval = setInterval(pollStatus, 2000);
+        }
+
+        function updateStatus(data) {
+            // Update progress bar
+            const progress = data.progress || 0;
+            progressFill.style.width = `${progress}%`;
+            progressText.textContent = `${progress}%`;
+            progressValue.textContent = `${progress}%`;
+
+            // Update status info
+            statusValue.textContent = data.status || 'Unknown';
+            stepValue.textContent = data.step || 'Unknown';
+            outputReady.textContent = data.output_ready ? 'Yes' : 'No';
+
+            // Update logs
+            if (data.logs_tail && data.logs_tail.length > 0) {
+                logsContainer.innerHTML = data.logs_tail
+                    .map(log => `<div class="log-line">${escapeHtml(log)}</div>`)
+                    .join('');
+                logsContainer.scrollTop = logsContainer.scrollHeight;
+            }
+
+            // Check if job is complete
+            if (data.status === 'done' && data.output_ready) {
+                clearInterval(statusInterval);
+                showVideo();
+            } else if (data.status === 'error') {
+                clearInterval(statusInterval);
+                showError('Job failed. Check the logs for details.');
+            }
+
+            // Add pulse effect for active status
+            if (data.status === 'running') {
+                statusSection.classList.add('pulse');
+            } else {
+                statusSection.classList.remove('pulse');
+            }
+        }
+
+        function showVideo() {
+            statusSection.style.display = 'none';
+            videoSection.style.display = 'block';
+
+            const videoUrl = `${API_BASE}/jobs/${currentJobId}/download`;
+            videoPlayer.src = videoUrl;
+            downloadLink.href = videoUrl;
+            downloadLink.download = `${currentJobId}.mp4`;
+        }
+
+        function showError(message) {
+            hideAllSections();
+            errorSection.style.display = 'block';
+            errorMessage.textContent = message;
+        }
+
+        function hideAllSections() {
+            statusSection.style.display = 'none';
+            videoSection.style.display = 'none';
+            errorSection.style.display = 'none';
+        }
+
+        function resetForm() {
+            hideAllSections();
+            formSection.style.display = 'block';
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = 'Generate Video ✨';
+            promptInput.value = '';
+            currentJobId = null;
+            
+            if (statusInterval) {
+                clearInterval(statusInterval);
+                statusInterval = null;
+            }
+        }
+
+        function createNewVideo() {
+            resetForm();
+        }
+
+        function cancelJob() {
+            if (statusInterval) {
+                clearInterval(statusInterval);
+                statusInterval = null;
+            }
+            resetForm();
+        }
+
+        function escapeHtml(text) {
+            const div = document.createElement('div');
+            div.textContent = text;
+            return div.innerHTML;
+        }
+
+        // Add some example prompts for better UX
+        const examples = [
+            "A mystical journey through the four elements, with a wise narrator exploring the balance of nature",
+            "A cosmic adventure showcasing the wonders of space, from distant planets to stellar phenomena",
+            "An exploration of human innovation and technology through the ages",
+            "A philosophical journey about the meaning of existence and consciousness"
+        ];
+
+        promptInput.addEventListener('focus', () => {
+            if (!promptInput.value) {
+                const randomExample = examples[Math.floor(Math.random() * examples.length)];
+                promptInput.placeholder = randomExample;
+            }
+        });
+    </script>
+</body>
+</html>

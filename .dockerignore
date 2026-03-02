@@ -1,0 +1,23 @@
+# .dockerignore
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.so
+.coverage
+.pytest_cache/
+.git/
+.gitignore
+README.md
+Dockerfile*
+docker-compose*.yml
+.env.example
+.DS_Store
+*.log
+node_modules/
+.vscode/
+.idea/
+
+# Keep jobs, avatar_outputs, music_outputs, video_outputs
+# as they are mounted as volumes
