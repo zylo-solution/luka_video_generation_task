@@ -14,10 +14,10 @@ services:
       - ./music_outputs:/app/music_outputs
       - ./video_outputs:/app/video_outputs
     ports:
-      - "8000:8000"
+      - "8005:8005"
     restart: unless-stopped
     healthcheck:
-      test: ["CMD", "curl", "-f", "http://localhost:8000/docs"]
+      test: ["CMD", "curl", "-f", "http://localhost:8005/docs"]
       interval: 30s
       timeout: 10s
       retries: 3
@@ -28,7 +28,7 @@ services:
       dockerfile: Dockerfile.frontend
     container_name: video_generation_frontend
     ports:
-      - "3000:80"
+      - "1122:80"
     depends_on:
       - backend
     restart: unless-stopped
